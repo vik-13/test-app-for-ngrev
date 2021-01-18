@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: 'AppComponent',
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
