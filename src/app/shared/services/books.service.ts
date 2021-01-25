@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { DashboardService } from '../../components/dashboard/dashboard.service';
 
 export interface Book {
   title: string;
@@ -13,7 +12,7 @@ export interface Book {
 
 @Injectable()
 export class BooksService {
-  constructor(private _http: HttpClient, private _dashboard: DashboardService) {}
+  constructor(private _http: HttpClient) {}
 
   get(): Observable<Book[]> {
     return this._http.get('').pipe(
