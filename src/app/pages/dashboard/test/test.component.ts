@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
-  template: '<app-button>Button</app-button>'
+  templateUrl: './test.component.html'
 })
-export class TestComponent {}
+export class TestComponent {
+  submit(form: NgForm): void {
+    console.log(form.value);
+  }
+}

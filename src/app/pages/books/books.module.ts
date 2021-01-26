@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BooksComponent } from './books.component';
-import { FormsModule } from '@angular/forms';
+import { ButtonModule } from '../../components/button';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     BooksComponent
   ],
   imports: [
-    FormsModule
+    CommonModule,
+    RouterModule,
+    ButtonModule
   ],
   exports: [
     BooksComponent
